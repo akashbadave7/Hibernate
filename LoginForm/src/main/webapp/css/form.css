@@ -1,0 +1,25 @@
+@CHARSET "UTF-8";
+
+.container
+{
+	border : 1px solid black;
+	box-shadow: 0 0 10px black;
+	background-color : white;
+	padding : 10px;
+	bottom : 0;
+	posirion : relative;
+	max-width: 355px; 
+	/* max-height: 700px; */
+	margin-top: 10%;
+	padding-bottom: 25px;
+	
+}
+
+.body
+{
+	baggroung-color: #F2F3F4;
+    direction: ltr;
+    font-family: 'Roboto'',sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+}

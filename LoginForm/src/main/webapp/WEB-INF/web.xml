@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <display-name>LoginForm</display-name>
+  <welcome-file-list>
+
+    <welcome-file>login.jsp</welcome-file>
+
+  </welcome-file-list>
+ 
+	<servlet>
+	<servlet-name>Login</servlet-name>
+	<jsp-file>/login.jsp</jsp-file>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name>Login</servlet-name>
+	<url-pattern>/login</url-pattern>
+	</servlet-mapping>
+
+  <servlet>
+    <servlet-name>LoginController</servlet-name>
+    <servlet-class>com.bridgeit.Controller.LoginController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>LoginController</servlet-name>
+    <url-pattern>/LoginPage</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+	<servlet-name>Signup</servlet-name>
+	<jsp-file>/signup.jsp</jsp-file>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name>Signup</servlet-name>
+	<url-pattern>/signup</url-pattern>
+	</servlet-mapping>
+  
+    <servlet>
+    	<servlet-name>SignUpController</servlet-name>
+    	<servlet-class>com.bridgeit.Controller.SignUpController</servlet-class>
+  	</servlet>
+  <servlet-mapping>
+    <servlet-name>SignUpController</servlet-name>
+    <url-pattern>/SignupPage</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>logout</servlet-name>
+    <servlet-class>com.bridgeit.Controller.LogoutController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>logout</servlet-name>
+    <url-pattern>/logout</url-pattern>
+  </servlet-mapping>
+  
+  	<servlet>
+		<servlet-name>HomePage</servlet-name>
+		<jsp-file>/homepage.jsp</jsp-file>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name>HomePage</servlet-name>
+	<url-pattern>/homepage</url-pattern>
+	</servlet-mapping>
+  <filter>
+  <filter-name>cache</filter-name>
+  <filter-class>com.bridgeit.CacheFilter.CacheFilter</filter-class>
+  </filter>
+  
+  <filter-mapping>
+  <filter-name>cache</filter-name>
+   <url-pattern>/login</url-pattern>
+  <url-pattern>/homepage</url-pattern>
+  </filter-mapping>
+  
+
+  
+</web-app>
